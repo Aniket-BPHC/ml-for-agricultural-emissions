@@ -1,41 +1,46 @@
-# ML for Agricultural Emissions
+# From Scratch ML for Agricultural Emissions
 
-Machine learning project exploring greenhouse gas emissions in agriculture through exploratory data analysis, regression modeling, regularization techniques, and classification algorithms implemented from scratch.
+A machine learning project exploring agricultural greenhouse gas emissions through regression and classification models implemented entirely from scratch using NumPy.
 
 ---
 
 ## Overview
 
-Agricultural activities are a significant contributor to greenhouse gas emissions. This project investigates how environmental conditions and farming practices influence emissions using a combination of statistical analysis and machine learning techniques.
+This project investigates the relationship between agricultural practices, environmental conditions, and greenhouse gas emissions.
+
+Instead of relying on machine learning libraries such as scikit-learn, the core learning algorithms were implemented manually to better understand optimization, regularization, and classification fundamentals.
 
 The project includes:
 
-* Exploratory Data Analysis (EDA)
-* Linear Regression
-* Polynomial Regression
-* L1 and L2 Regularization
-* Classification Reformulation
-* Model Evaluation and Comparison
-
-The emphasis is on understanding machine learning fundamentals through custom implementations and empirical analysis.
+- Data preprocessing and feature engineering
+- Exploratory Data Analysis (EDA)
+- Linear Regression
+- Polynomial Regression
+- Ridge Regression (L2)
+- Lasso Regression (L1)
+- Logistic Regression
+- Gaussian Naive Bayes
+- Perceptron
+- Model evaluation and comparison
 
 ---
 
 ## Dataset
 
-The repository includes a structured agricultural emissions dataset containing information such as:
+The repository includes a dataset containing agricultural and environmental variables such as:
 
-* Crop type
-* Fertilizer usage
-* Irrigation patterns
-* Temperature
-* Rainfall
-* Humidity
-* Greenhouse gas emission indicators
+- Nitrogen usage
+- Irrigation levels
+- Temperature
+- Rainfall
+- Humidity
+- Greenhouse gas emissions
 
 Target Variable:
 
-* Total greenhouse gas emissions (CO₂-equivalent)
+```
+Total_GHG_kgCO2e
+```
 
 Dataset file:
 
@@ -56,93 +61,84 @@ Dataset.csv
 
 ---
 
-## Features Implemented
+## Machine Learning Models
 
-### Data Preprocessing
+### Regression
 
-* Dataset inspection and cleaning
-* Missing value analysis
-* Numerical and categorical feature identification
-* Feature selection and scaling
+Implemented from scratch:
 
-### Exploratory Data Analysis
-
-* Descriptive statistics
-* Histograms and boxplots
-* Correlation analysis
-* Scatter plot visualization
-* Distribution analysis
-
-### Regression Models
-
-Implemented and evaluated:
-
-* Linear Regression
-* Batch Gradient Descent
-* Stochastic Gradient Descent
-* Polynomial Regression (Degree 2)
-* Ridge Regression (L2)
-* Lasso Regression (L1)
+- Linear Regression
+  - Batch Gradient Descent
+  - Stochastic Gradient Descent
+- Polynomial Regression (Degree 2)
+- Ridge Regression (L2 Regularization)
+- Lasso Regression (L1 Regularization)
 
 Evaluation Metrics:
 
-* Mean Absolute Error (MAE)
-* Mean Squared Error (MSE)
-* R² Score
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- R² Score
 
-### Classification Models
+### Classification
 
-The emissions prediction problem was reformulated as a classification task.
+The emissions prediction problem was reformulated into a multi-class classification task using percentile-based emission categories.
 
-Implemented:
+Implemented from scratch:
 
-* Logistic Regression
-* Naive Bayes
-* Perceptron
+- Logistic Regression (One-vs-Rest)
+- Gaussian Naive Bayes
+- Perceptron
 
 Evaluation Metrics:
 
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+---
+
+## Key Features
+
+- Custom train-test split implementation
+- Custom feature standardization
+- Manual gradient descent optimization
+- Polynomial feature generation
+- L1 and L2 regularization
+- Custom classification metrics
+- Correlation analysis and visualization
+- Model comparison dashboards
 
 ---
 
 ## Technologies Used
 
-* Python
-* NumPy
-* Pandas
-* Matplotlib
-* Seaborn
-* Jupyter Notebook
-
----
-
-## Key Learnings
-
-* Building machine learning models from first principles
-* Understanding optimization through gradient descent
-* Applying regularization to control overfitting
-* Comparing regression and classification approaches
-* Performing end-to-end exploratory data analysis
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
 ---
 
 ## Running the Project
 
-Open the notebook and run all cells:
-
 ```
 jupyter notebook ml_for_agricultural_emissions.ipynb
 ```
 
-The notebook contains the complete workflow, from data preprocessing to model evaluation and visualization.
+Run all notebook cells sequentially to reproduce preprocessing, training, evaluation, and visualizations.
 
 ---
 
-## Notes
+## Learning Outcomes
 
-This project focuses on developing a deeper understanding of machine learning algorithms and model behavior through implementation, experimentation, and analysis.
+- Implementing machine learning algorithms from first principles
+- Understanding optimization through gradient descent
+- Exploring bias-variance tradeoffs
+- Applying regularization techniques
+- Comparing regression and classification approaches
+- Building complete end-to-end ML workflows
